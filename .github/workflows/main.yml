@@ -17,8 +17,8 @@ jobs:
       - name: Install dependencies and run tests
         run: yarn install --frozen-lockfile
 
-      - name: Build
-        run: npx gatsby build
+      - name: Build & Clean
+        run: npx gatsby build && rm -rf .cache/
 
       - name: Prepare Screenshots Folder
         run: mkdir -p ./screenshots
